@@ -16,7 +16,7 @@ public class Main {
         System.out.println(message.replace("!", "*")); // returns new string
         System.out.println(message); // Strings are emmutable
         System.out.println(message.toLowerCase());
-
+        
 
 
 
