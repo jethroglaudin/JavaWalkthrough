@@ -14,7 +14,5 @@ public class Main {
         String s = "1";
         int num  = Integer.parseInt(s);
         System.out.println(num);
-
-
     }
 }
