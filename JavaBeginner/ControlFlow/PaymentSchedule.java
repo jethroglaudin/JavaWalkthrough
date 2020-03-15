@@ -61,7 +61,7 @@ public class Main {
         short monthlyPeriods = (short) (years * MONTHS_IN_YEAR);
         int paymentsMade = 1;
         
-        for (short month = 1; month < monthlyPeriods; month++) {
+        for (short month = 1; month <= monthlyPeriods; month++) {
             double remainingBalance = PRINCIPAL * (Math.pow(1 + monthlyInterestRate, monthlyPeriods) -
                      Math.pow(1 + monthlyInterestRate, paymentsMade)) / (Math.pow((1 + monthlyInterestRate), monthlyPeriods) - 1);
             paymentsMade++;
