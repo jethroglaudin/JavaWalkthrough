@@ -10,6 +10,6 @@ public class Main {
     public static String greetUser(String firstName, String lastName) {
 //        System.out.println("Hello " + firstName + " " + lastName);
         return "Hello " + firstName + " " + lastName;
-
+        
     }
 }
