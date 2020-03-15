@@ -13,7 +13,7 @@ public class Main {
         final int PRINCIPAL = (int) readNumber("Principal ($1K - $1M): ", 1_000, 1_000_000);
         final float ANNUAL_INTEREST_RATE = (float) readNumber("Annual Interest Rate: ", 1, 30);
         final byte ANNUAL_PERIODS = (byte) readNumber("Period (Years)", 1, 30);
-
+        
         final double Mortgage = calculateMortgage(PRINCIPAL, ANNUAL_INTEREST_RATE, ANNUAL_PERIODS);
         String formattedMortgage = NumberFormat.getCurrencyInstance().format(Mortgage);
 
@@ -54,13 +54,13 @@ public class Main {
         System.out.println("Monthly Payments: " + Mortgage);
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("------------------");
-
+        
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
         float monthlyInterestRate = ((ANNUAL_INTEREST_RATE / PERCENT) / MONTHS_IN_YEAR);
         short monthlyPeriods = (short) (years * MONTHS_IN_YEAR);
         int paymentsMade = 1;
-
+        
         for (short month = 1; month < monthlyPeriods; month++) {
             double remainingBalance = PRINCIPAL * (Math.pow(1 + monthlyInterestRate, monthlyPeriods) -
                      Math.pow(1 + monthlyInterestRate, paymentsMade)) / (Math.pow((1 + monthlyInterestRate), monthlyPeriods) - 1);
