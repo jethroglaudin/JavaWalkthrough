@@ -7,7 +7,7 @@ public class Main {
 //        browser.navigate("espn");
 
         var employee = new Employee(50_000, 20);
-        int wage = employee.calculateWage(10);
+        int wage = employee.calculateWage();
         System.out.println(wage);
     }
 }
