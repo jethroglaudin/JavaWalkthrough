@@ -1,11 +1,7 @@
 package com.jethro;
 
 
-import java.text.NumberFormat;
-
 public class Main {
-    final static byte MONTHS_IN_YEAR = 12;
-    final static byte PERCENT = 100;
 
     public static void main(String[] args) {
         System.out.println("************MORTGAGE CALCULATOR************");
