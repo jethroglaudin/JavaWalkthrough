@@ -2,7 +2,7 @@ package com.jethro;
 
 public class Browser {
     public void navigate(String address){
-        String ip = findIpAdress(address, true);
+        String ip = findIpAddress(address, true);
         String html = sendHttpRequest(ip);
         System.out.println(html);
     }
@@ -11,7 +11,7 @@ public class Browser {
         return "<html></html?";
     }
 
-    private String findIpAdress(String address, boolean cache) {
+    private String findIpAddress(String address, boolean cache) {
         return "127.0.0.1";
     }
 }
