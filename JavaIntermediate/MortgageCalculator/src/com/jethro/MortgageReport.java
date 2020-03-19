@@ -6,10 +6,8 @@ public class MortgageReport {
     public static void paymentsLeft(int PRINCIPAL, float ANNUAL_INTEREST_RATE, byte years, String formattedMortgage, double Mortgage) {
         printPaymentSchedule(formattedMortgage, Mortgage);
 
-        final byte MONTHS_IN_YEAR = 12;
-        final byte PERCENT = 100;
-        float monthlyInterestRate = ((ANNUAL_INTEREST_RATE / PERCENT) / MONTHS_IN_YEAR);
-        short monthlyPeriods = (short) (years * MONTHS_IN_YEAR);
+        float monthlyInterestRate = ((ANNUAL_INTEREST_RATE / Main.PERCENT) / Main.MONTHS_IN_YEAR);
+        short monthlyPeriods = (short) (years * Main.MONTHS_IN_YEAR);
         int paymentsMade = 1;
 
         for (short month = 1; month <= monthlyPeriods; month++) {
