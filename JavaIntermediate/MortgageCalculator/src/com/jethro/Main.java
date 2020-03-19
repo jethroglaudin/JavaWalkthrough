@@ -2,7 +2,6 @@ package com.jethro;
 
 
 import java.text.NumberFormat;
-import java.util.Scanner;
 
 public class Main {
 
@@ -10,27 +9,14 @@ public class Main {
         System.out.println("************MORTGAGE CALCULATOR************");
         System.out.println("Calculate your monthly Mortgage Payments");
 
-        final int PRINCIPAL = (int) readNumber("Principal ($1K - $1M): ", 1_000, 1_000_000);
-        final float ANNUAL_INTEREST_RATE = (float) readNumber("Annual Interest Rate: ", 1, 30);
-        final byte ANNUAL_PERIODS = (byte) readNumber("Period (Years)", 1, 30);
+        final int PRINCIPAL = (int) Console.readNumber("Principal ($1K - $1M): ", 1_000, 1_000_000);
+        final float ANNUAL_INTEREST_RATE = (float) Console.readNumber("Annual Interest Rate: ", 1, 30);
+        final byte ANNUAL_PERIODS = (byte) Console.readNumber("Period (Years)", 1, 30);
 
         final double Mortgage = calculateMortgage(PRINCIPAL, ANNUAL_INTEREST_RATE, ANNUAL_PERIODS);
         String formattedMortgage = NumberFormat.getCurrencyInstance().format(Mortgage);
 
         paymentsLeft(PRINCIPAL, ANNUAL_INTEREST_RATE, ANNUAL_PERIODS, formattedMortgage, Mortgage);
-    }
-
-    public static double readNumber(String prompt, double min, double max) {
-        Scanner scanner = new Scanner(System.in);
-        double value;
-        while (true) {
-            System.out.print(prompt);
-            value = scanner.nextFloat();
-            if (value >= min && value <= max)
-                break;
-            System.out.println("Enter a value between " + min + " " + max);
-        }
-        return value;
     }
 
     public static double calculateMortgage(
