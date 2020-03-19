@@ -15,10 +15,10 @@ public class Main {
         final float ANNUAL_INTEREST_RATE = (float) Console.readNumber("Annual Interest Rate: ", 1, 30);
         final byte ANNUAL_PERIODS = (byte) Console.readNumber("Period (Years)", 1, 30);
 
-        final double Mortgage = MortgageCalculator.calculateMortgage(PRINCIPAL, ANNUAL_INTEREST_RATE, ANNUAL_PERIODS);
-        String formattedMortgage = NumberFormat.getCurrencyInstance().format(Mortgage);
-
-        MortgageReport.paymentsLeft(PRINCIPAL, ANNUAL_INTEREST_RATE, ANNUAL_PERIODS, formattedMortgage, Mortgage);
+//        final double Mortgage = MortgageCalculator.calculateMortgage(PRINCIPAL, ANNUAL_INTEREST_RATE, ANNUAL_PERIODS);
+//        String formattedMortgage = NumberFormat.getCurrencyInstance().format(Mortgage);
+//
+//        MortgageReport.paymentsLeft(PRINCIPAL, ANNUAL_INTEREST_RATE, ANNUAL_PERIODS, formattedMortgage, Mortgage);
     }
 
 }
