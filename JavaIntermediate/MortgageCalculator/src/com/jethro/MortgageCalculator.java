@@ -1,8 +1,10 @@
 package com.jethro;
 
+import java.text.NumberFormat;
+
 public class MortgageCalculator {
-    public final static byte MONTHS_IN_YEAR = 12;
-    public final static byte PERCENT = 100;
+    private final static byte MONTHS_IN_YEAR = 12;
+    private final static byte PERCENT = 100;
 
     private final int PRINCIPAL;
     private final float ANNUAL_INTEREST_RATE;
@@ -32,6 +34,12 @@ public class MortgageCalculator {
         return MonthlyMortgagePayments;
     }
 
+    public double[] getRemainingBalances(){
+        var balances = new double[getMonthlyPeriods()];
+        for (short month = 1; month <= balances.length; month++)
+            balances[month - 1] = remainingBalance(month);
+        return balances;
+    }
     private short getMonthlyPeriods() {
         return (short) (years * MONTHS_IN_YEAR);
     }
@@ -39,9 +47,4 @@ public class MortgageCalculator {
     private float getMonthlyInterest() {
         return (ANNUAL_INTEREST_RATE / PERCENT) / MONTHS_IN_YEAR;
     }
-
-    public short getYears() {
-        return years;
-    }
-
 }
