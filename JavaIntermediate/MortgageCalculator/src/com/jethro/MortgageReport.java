@@ -11,11 +11,8 @@ public class MortgageReport {
     }
 
     public void paymentsLeft() {
-        short monthlyPeriods = (short) (calculator.getYears() * MortgageCalculator.MONTHS_IN_YEAR);
-        for (short month = 1; month <= monthlyPeriods; month++) {
-            double remainingBalance = calculator.remainingBalance(month);
-            System.out.println(NumberFormat.getCurrencyInstance().format(remainingBalance));
-        }
+        for (double balance : calculator.getRemainingBalances())
+            System.out.println(NumberFormat.getCurrencyInstance().format(balance));
     }
 
     public void printPaymentSchedule() {
