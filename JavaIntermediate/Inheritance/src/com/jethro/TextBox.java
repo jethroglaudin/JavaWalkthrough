@@ -5,8 +5,14 @@ public class TextBox extends UIControl {
 
     public TextBox()  {
         super(true);
-
         System.out.println("TextBox");
+    }
+
+    // Method Overriding
+    // Annotations
+    @Override
+    public String toString() {
+        return text;
     }
 
     public void setText(String text) {this.text = text;}
