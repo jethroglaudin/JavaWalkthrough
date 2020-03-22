@@ -3,8 +3,14 @@ package com.jethro;
 public class TextBox extends UIControl {
     private String text = "";
 
-    public TextBox()  {
-        super(true);
+//    public TextBox()  {
+//        super(true);
+//    }
+
+
+    @Override
+    public void render() {
+        System.out.println("Render TextBox");
     }
 
     // Method Overriding
