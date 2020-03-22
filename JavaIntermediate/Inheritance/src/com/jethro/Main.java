@@ -3,9 +3,18 @@ package com.jethro;
 public class Main {
 
     public static void main(String[] args) {
-        var control = new UIControl(true);
-        var textBox = new TextBox();
-        show(textBox); // Upcasting Cast the object to it's parent
+//        var control = new UIControl(true);
+//        var textBox = new TextBox();
+//        show(textBox); // Upcasting Cast the object to it's parent
+
+        var point1 = new Point(1, 2);
+        var point2 = new Point(1, 2);
+        System.out.println(point1.equals(point2));
+        System.out.println(point1.equals(new TextBox()));
+        System.out.println(point1.hashCode());
+        System.out.println(point2.hashCode());
+
+
 
     }
     // Upcasting
