@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4985e54c-4ccd-4e18-9db0-7885af01bc39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mytube/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mytube/SqlVideoDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mytube/XNotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mytube/XVideoEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mytube/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mytube/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mytube/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mytube/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mytube/VideoDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mytube/VideoDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mytube/VideoEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mytube/VideoEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mytube/VideoProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mytube/VideoProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561581936501</updated>
-      <workItem from="1584924681500" duration="1661000" />
+      <workItem from="1584924681500" duration="2053000" />
     </task>
     <servers />
   </component>
