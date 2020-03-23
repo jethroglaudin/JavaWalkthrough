@@ -1,4 +1,7 @@
 package com.jethro;
 
-public interface UIWidget {
+public interface UIWidget
+        extends Draggable, Resizable {
+    void render();
 }
+
