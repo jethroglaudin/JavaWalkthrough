@@ -1,10 +1,10 @@
 package com.jethro;
 
 public class TaxReport {
-    private TaxCalculator2020 calculator;
+    private TaxCalculator calculator;
 
-    public TaxReport() {
-        calculator = new TaxCalculator2020(100_000);
+    public TaxReport(TaxCalculator calculator) { // constructor injection.
+        this.calculator = calculator;
     }
 
     public void show() {
