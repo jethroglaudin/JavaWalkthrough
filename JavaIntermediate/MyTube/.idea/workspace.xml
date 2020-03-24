@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4985e54c-4ccd-4e18-9db0-7885af01bc39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/META-INF/MyTube.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/META-INF/MyTube.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/EmailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Video.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Video.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoEncoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mytube/XNotificationService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1561581936501</updated>
       <workItem from="1584924681500" duration="2053000" />
+      <workItem from="1584994597916" duration="2865000" />
     </task>
     <servers />
   </component>
@@ -88,17 +98,41 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1584934119209">
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1584994903609">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584934119209" />
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584994903609" />
     <state x="458" y="88" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584933391993">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="88" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584933391993" />
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584994983074">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584994983074" />
+    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1585018249489">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="230" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1585018249489" />
+    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1585018249487">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="230" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1585018249487" />
+    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1585018249486">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="230" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1585018249486" />
+    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1585018249488">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="230" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1585018249488" />
     <state x="208" y="43" key="SettingsEditor" timestamp="1584932555829">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="208" y="43" key="SettingsEditor/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1584932555829" />
+    <state x="114" y="96" key="new project wizard" timestamp="1585018246953">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="114" y="96" key="new project wizard/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1585018246953" />
   </component>
 </project>
