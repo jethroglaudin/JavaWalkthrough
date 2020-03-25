@@ -25,35 +25,69 @@ public class School {
         totalMoneySpent = 0;
     }
 
+    /**
+     *
+     * @return the list of teachers in the school
+     */
     public List<Teacher> getTeachers() {
         return teachers;
     }
 
+    /**
+     *
+     * @return the list of students in the school
+     */
     public List<Student> getStudents() {
         return students;
     }
 
+
+    /**
+     *
+     * @return the total money earned by the school
+     */
     public int getTotalMoneyEarned() {
         return totalMoneyEarned;
     }
 
+    /**
+     *
+     * @return the total money spent by the school.
+     */
     public int getTotalMoneySpent() {
         return totalMoneySpent;
     }
 
-    public void setTeachers(List<Teacher> teachers) {
-        this.teachers = teachers;
+    /**
+     * Adds a teacher to the school
+     * @param teacher
+     */
+    public void addTeacher(Teacher teacher) {
+        teachers.add(teacher);
     }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
+    /**
+     *  Adds a student to the school
+     * @return
+     */
+    public void addStudent(Student student) {
+        students.add(student);
     }
 
-    public void setTotalMoneyEarned(int totalMoneyEarned) {
-        this.totalMoneyEarned = totalMoneyEarned;
+    /**
+     * Adds the total money earned by the school.
+     * @param totalMoneyEarned money that is supposed to be added.
+     */
+    public void updateTotalMoneyEarned(int totalMoneyEarned) {
+        this.totalMoneyEarned += totalMoneyEarned;
     }
 
-    public void setTotalMoneySpent(int totalMoneySpent) {
-        this.totalMoneySpent = totalMoneySpent;
+    /**
+     * Update the money that is spent by the school
+     * is the salary given by the school to its teachers.
+     * @param moneySpent the money spent by the scool
+     */
+    public void updateTotalMoneySpent(int moneySpent) {
+        totalMoneyEarned -= totalMoneySpent;
     }
 }
