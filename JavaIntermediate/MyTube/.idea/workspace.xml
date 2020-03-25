@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4985e54c-4ccd-4e18-9db0-7885af01bc39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/META-INF/MyTube.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/META-INF/MyTube.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/EmailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Video.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/Video.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyTube/com/mytube/VideoStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mytube/XNotificationService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +85,7 @@
       <updated>1561581936501</updated>
       <workItem from="1584924681500" duration="2053000" />
       <workItem from="1584994597916" duration="2865000" />
+      <workItem from="1585171173667" duration="1419000" />
     </task>
     <servers />
   </component>

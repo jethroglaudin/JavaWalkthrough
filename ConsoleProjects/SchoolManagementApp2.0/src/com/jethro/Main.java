@@ -12,9 +12,12 @@ public class Main {
 
         while (true){
             var input = scanner.next().toLowerCase();
-            if(input.equals("yes")){
+            System.out.println("Enter the Name of your school");
+
+            if(input.equals("exit")){
                 break;
             }
+
         }
     }
 }
