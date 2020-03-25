@@ -1,5 +1,7 @@
 package school.management.system;
 
+import java.text.NumberFormat;
+
 /*
 * This class is responsible for keeping track
 * of students fees, name, grade and fees paid.
@@ -47,8 +49,9 @@ public class Student {
      *
      * @param fees the fees that the student pays
      */
-    public void updateFeesPaid(int fees) {
+    public void payFees(int fees) {
         feesPaid+=fees;
+         School.updateTotalMoneyEarned(feesPaid);
     }
 
     /**
@@ -89,5 +92,19 @@ public class Student {
      */
     public int getFeesTotal() {
         return feesTotal;
+    }
+
+    /**
+     *
+     * @return the remaining fees
+     */
+    public int getRemainingFees() {
+        return feesTotal - feesPaid;
+    }
+
+    @Override
+    public String toString() {
+        return "Student's name: " +name+
+                " Total fees paid so far " + NumberFormat.getCurrencyInstance().format(feesPaid);
     }
 }
