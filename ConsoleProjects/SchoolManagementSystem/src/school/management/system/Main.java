@@ -29,6 +29,8 @@ public class Main {
 
 
         School ghs = new School(teacherList, studentList);
+        Teacher megan = new Teacher(4, "Megan", 900);
+        ghs.addTeacher(megan);
 
         tamasha.payFees(5_000);
         remy.payFees(11_000);
@@ -45,6 +47,7 @@ public class Main {
                 NumberFormat.getCurrencyInstance().format(ghs.getTotalMoneyEarned()));
 
         System.out.println(remy);
-
+        mellisa.receiveSalary(mellisa.getSalary());
+        System.out.println(mellisa);
     }
 }
