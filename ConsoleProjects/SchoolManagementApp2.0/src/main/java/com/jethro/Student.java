@@ -37,5 +37,8 @@ public class Student {
         return feesTotal - feesPaid;
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

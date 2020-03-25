@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4985e54c-4ccd-4e18-9db0-7885af01bc39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/main/java/com/jethro/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/main/java/com/jethro/School.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/main/java/com/jethro/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/com/jethro/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/main/java/com/jethro/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/main/java/com/jethro/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ConsoleProjects/SchoolManagementApp2.0/src/main/java/com/jethro/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
