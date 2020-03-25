@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true){
-            var input = scanner.next().toLowerCase();
+            String input = scanner.next().toLowerCase();
             System.out.println("Enter the Name of your school");
 
             if(input.equals("exit")){

@@ -1,5 +1,7 @@
 package com.jethro;
 
+import java.text.NumberFormat;
+
 public class Student {
     private int id;
     private String name;
@@ -39,6 +41,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Student's name: " +name+
+                " Total fees paid so far " + NumberFormat.getCurrencyInstance().format(feesPaid);
     }
 }
