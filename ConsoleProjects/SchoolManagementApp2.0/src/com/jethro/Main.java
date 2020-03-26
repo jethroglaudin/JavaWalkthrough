@@ -12,9 +12,22 @@ public class Main {
         System.out.println("Enter the Name of your school");
 
         while (true){
-            String input = scanner.nextLine().toUpperCase();
-            if(input.equals("exit")) break;
-            System.out.println(input);
+            String nameOfSchool = scanner.nextLine().toUpperCase();
+            if(scanner.nextLine().equals("quit")) break;
+            System.out.println(nameOfSchool);
+
+            while (true){
+                System.out.println(" ");
+                System.out.println("Enter teacher name");
+                System.out.println("If you are done adding teachers to your school type 'done'");
+                String teacherName = scanner.nextLine();
+                if(scanner.nextLine().equals("quit")) break;
+                System.out.println("Enter Teacher Salary");
+                
+
+
+            }
+
 
         }
     }
