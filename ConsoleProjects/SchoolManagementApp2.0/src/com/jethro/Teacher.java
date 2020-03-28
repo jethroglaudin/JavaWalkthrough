@@ -20,7 +20,7 @@ public class Teacher {
      * @param name   name of the teacher
      * @param salary salary of the teacher
      */
-    public Teacher(int id, String name, int salary) {
+    public Teacher(int id, String name, double salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
