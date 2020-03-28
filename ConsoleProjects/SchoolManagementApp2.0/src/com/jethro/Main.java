@@ -69,6 +69,9 @@ public class Main {
                 var whatNext = scanner.next();
                 if(whatNext.equals("done")) break;
             }
+            System.out.println("Enter what you would like to do next \n" +
+                    "Get Teacher Name: [1] \n" +
+                    "Get Teacher Id ");
             break;
         }
     }
