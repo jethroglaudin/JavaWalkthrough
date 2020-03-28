@@ -40,7 +40,7 @@ public class Teacher {
      * @return name of the teacher
      */
     public String getName() {
-        return name;
+        return new String[]{name, id};
     }
 
     /**
