@@ -21,14 +21,14 @@ public class Main {
 
         while (true){
             while (true){ // loop for adding teachers
-                System.out.println("Enter teacher name");
+                System.out.println("Enter Teacher's name");
                 if(scanner.next().equals("quit")) break;
                 else {
                     var userInput = scanner.nextLine();
                     if(userInput.equals("done")) break;
 
                     String teacherName = userInput;
-                    System.out.println("Enter Teacher Salary");
+                    System.out.println("Enter Teacher's Salary");
 
                     userInput = scanner.next();
                     if(userInput.equals("quit")) break;
@@ -37,19 +37,38 @@ public class Main {
                     Teacher newTeacher = new Teacher(teacherId, teacherName, teacherSalary);
                     teacherId++;
                     teacherList.add(newTeacher);
-
-                    System.out.println("You've successfully added " +teacherName+ "to your teacher list. Would you like to add another{enter: add}" +
+                    System.out.println("You've successfully added " +teacherName+ " to your teacher list. Would you like to add another{enter: add}" +
                             ", or are you finished {enter: done}");
                 }
-                System.out.println("If you are done adding teachers to your school type 'done' or hit continue");
+                System.out.println("If you are done adding teachers to your school type 'done' or hit continue add more");
                 var whatNext = scanner.next();
                 if(whatNext.equals("done")) break;
             }
-//            while(true) { // loop for adding students
-//                System.out.println("Now let's add some students! \n ");
-//
-//              break;
-//            }
+            while(true) { // loop for adding students
+                System.out.println("Now let's add some students! \n");
+                System.out.println("Enter Student's name");
+                if(scanner.next().equals("quit")) break;
+                else {
+                    var userInput = scanner.nextLine();
+                    if(userInput.equals("done")) break;
+
+                    String studentName = userInput;
+                    System.out.println("Enter Student's Grade");
+
+                    userInput = scanner.next();
+                    if(userInput.equals("quit")) break;
+                    short grade = Short.parseShort(userInput);
+
+                    Student newStudent = new Student(studentId, studentName, grade);
+                    studentId++;
+                    studentList.add(newStudent);
+                    System.out.println("You've successfully added " +studentName+ "vto your student list. Would you like to add another{enter: add}" +
+                            ", or are you finished {enter: done}");
+                }
+                System.out.println("If you are done adding students to your school type 'done' or hit continue to add more");
+                var whatNext = scanner.next();
+                if(whatNext.equals("done")) break;
+            }
             break;
         }
     }
