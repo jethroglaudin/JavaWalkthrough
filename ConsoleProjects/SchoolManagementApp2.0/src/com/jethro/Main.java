@@ -1,5 +1,6 @@
 package com.jethro;
 
+import java.sql.Array;
 import java.util.*;
 
 public class Main {
@@ -36,12 +37,12 @@ public class Main {
                 double teacherSalary = Double.parseDouble(userInput);
 
                 Teacher newTeacher = new Teacher(teacherId, teacherName, teacherSalary);
+
                 teacherId++;
                 teacherList.add(newTeacher);
-                System.out.println("You've successfully added " + teacherName + " to your teacher list. Would you like to add another{enter: add}" +
-                        ", or are you finished {enter: done}");
+                System.out.println("You've successfully added " + teacherName + " to your teacher list. Would you like to add another");
 
-                System.out.println("If you are done adding teachers to your school type 'done' or hit continue add more \n");
+                System.out.println("If you are done adding teachers to your school type 'done' or hit 'continue' add more \n");
                 var whatNext = scanner.next();
                 if (whatNext.equals("done"))
                     break;
@@ -71,29 +72,38 @@ public class Main {
                 var whatNext = scanner.next();
                 if (whatNext.equals("done")) break;
             }
-            System.out.println("Enter what you would like to do next \n" +
-                    "Get Teacher's Info: [1] \n" +
-                    "Update Teacher's Salary [2] \n" +
-                    "Add Teacher's Salary [3]");
-            var userInput = scanner.nextInt();
-//            switch (userInput){
-//                case 1: while(true) {
-            if (userInput == 1) {
-                while (true) {
-                    System.out.println("Enter Teacher's name you want to get info for");
-                    var teacherName = scanner.next();
-                    var index = teacherList.indexOf(teacherName);
 
-                    if (index <= -1) {
-                        System.out.println("Teacher could not be found");
-                    } else {
-                        var teacher = teacherList.get(index);
-                        for (Teacher i : teacherList) {
-                            System.out.println(Arrays.toString(i.getInfo()));
-                        }
-                    }
-                    break;
+            while (true) {
+                System.out.println("Enter what you would like to do next \n" +
+                        "Get Teacher's Info: [1] \n" +
+                        "Update Teacher's Salary [2] \n" +
+                        "Add Teacher's Salary [3]\n");
+                if (!scanner.hasNextInt()) {
+                    continue;
                 }
+                var userInput = scanner.nextInt();
+                if (userInput == 1) {
+                    while (true) {
+                        System.out.println("Enter Teacher's name you want to get info for");
+                        var teacherName = scanner.next();
+
+//                        if (index <= -1) {
+//                            System.out.println("Teacher could not be found");
+//
+                        String[] teacherInfo;
+                        for (Teacher teacher : teacherList) {
+                            if (teacher.getName().contains(teacherName)) {
+                                teacherInfo = teacher.getInfo();
+                                for(var i = 0; i < teacherInfo.length; i++){
+                                    System.out.println(teacherInfo[0]);
+                                }
+                            }
+                        }
+
+                        break;
+                    }
+                }
+                break;
             }
             break;
         }
