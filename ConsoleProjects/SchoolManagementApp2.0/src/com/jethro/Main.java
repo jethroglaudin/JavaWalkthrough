@@ -76,8 +76,8 @@ public class Main {
             while (true) {
                 System.out.println("Enter what you would like to do next \n" +
                         "Get Teacher's Info: [1] \n" +
-                        "Update Teacher's Salary [2] \n" +
-                        "Add Teacher's Salary [3]\n");
+                        "Update Teacher's Salary: [2] \n" +
+                        "Add Teacher's Salary: [3]\n");
                 if (!scanner.hasNextInt()) {
                     continue;
                 }
@@ -86,20 +86,23 @@ public class Main {
                     while (true) {
                         System.out.println("Enter Teacher's name you want to get info for");
                         var teacherName = scanner.next();
-
-//                        if (index <= -1) {
-//                            System.out.println("Teacher could not be found");
-//
                         String[] teacherInfo;
                         for (Teacher teacher : teacherList) {
                             if (teacher.getName().contains(teacherName)) {
                                 teacherInfo = teacher.getInfo();
-                                for(var i = 0; i < teacherInfo.length; i++){
-                                    System.out.println(teacherInfo[0]);
+                                for (var i = 0; i < teacherInfo.length; i++) {
+                                    System.out.println("ID: " + teacherInfo[0] + " " + "Name: " + teacherInfo[1] + " "
+                                            + "Salary: " + teacherInfo[2] + " " + "Salary Earned: " + teacherInfo[3]);
                                 }
+                            } else {
+                                System.out.println("Could not find that teacher");
+                                System.out.println("Enter redo to try again or enter back to return to teacher prompt");
                             }
+                            if(scanner.next().equals("redo")) {
+                                continue;
+                            }
+                            break;
                         }
-
                         break;
                     }
                 }
