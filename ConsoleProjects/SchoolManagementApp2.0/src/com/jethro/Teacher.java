@@ -77,9 +77,9 @@ public class Teacher {
     public void setSalary(int salary) {
         this.salary = salary;
     }
-
-    @Override
-    public String toString() {
-        return "Teacher: " + name + " Total salary earned so far is  " + NumberFormat.getCurrencyInstance().format(salaryEarned);
-    }
+//
+//    @Override
+////    public String toString() {
+////        return "Teacher: " + name + " Total salary earned so far is  " + NumberFormat.getCurrencyInstance().format(salaryEarned);
+////    }
 }
