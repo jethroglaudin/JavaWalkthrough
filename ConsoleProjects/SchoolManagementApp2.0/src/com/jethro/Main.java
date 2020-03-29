@@ -112,20 +112,15 @@ public class Main {
                                 System.out.println("Enter 'redo' to try again or enter 'back' to return to teacher prompt");
                             }
                         }
-                        if(isFound)   {
-                            System.out.println("Enter back to return to teacher prompt");
-                            if(scanner.next().equals("back")) {
-                                break;
+                        if(!isFound)   {
+                            if(scanner.next().equals("redo")) {
+                                continue;
                             }
-                        }
-                        // move is found outside of for loop and
-                        if(scanner.next().equals("redo")) {
-                            continue;
                         }
                         break;
                     }
                 }
-                System.out.println("Return back to teacher prompt or move to student prompt");
+                System.out.println("Enter {return} back to teacher prompt or move to student prompt enter {student}");
                 if(!scanner.next().equals("return")){
                     break;
                 }
