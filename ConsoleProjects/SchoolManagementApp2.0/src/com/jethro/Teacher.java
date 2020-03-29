@@ -53,8 +53,8 @@ public class Teacher {
         String[] teacherInfo = new String [4];
         teacherInfo[0] = Integer.toString(id);
         teacherInfo[1] = name;
-        teacherInfo[3] = Double.toString(salary);
-        teacherInfo[4] = Double.toString(salaryEarned);
+        teacherInfo[2] = Double.toString(salary);
+        teacherInfo[3] = Double.toString(salaryEarned);
 
         return teacherInfo;
     }
