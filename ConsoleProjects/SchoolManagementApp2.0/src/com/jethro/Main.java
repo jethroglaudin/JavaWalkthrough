@@ -2,6 +2,7 @@ package com.jethro;
 
 import java.sql.Array;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -119,6 +120,20 @@ public class Main {
                         }
                         break;
                     }
+                }
+                else if(userInput == 2) {
+                    while (true) {
+                        System.out.println("Enter which teacher you want to update their salary");
+                        var teacherName = scanner.next();
+                        System.out.println("You've selected + " +teacherName);
+                        System.out.println("Enter Their updated Salary");
+
+                        var index = teacherList.stream().filter(obj -> obj.getName().equals(teacherName)).collect(Collectors.toList());
+                        index.get(0).setSalary(50000);
+
+                        break;
+                    }
+
                 }
                 System.out.println("Enter {return} back to teacher prompt or move to student prompt enter {student}");
                 if(!scanner.next().equals("return")){
