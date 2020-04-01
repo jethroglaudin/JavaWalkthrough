@@ -18,6 +18,7 @@ public class UI {
         System.out.println("Enter the Name of your school \n");
         String nameOfSchool = scanner.nextLine().toUpperCase();
         System.out.println(nameOfSchool);
+//        School school = new School(teacherList, studentList);
         System.out.println("Would you like to begin importing Teachers and Students? {yes} {no}");
 
         while (true) {
