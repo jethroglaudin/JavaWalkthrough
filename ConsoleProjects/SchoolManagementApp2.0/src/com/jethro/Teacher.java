@@ -52,7 +52,7 @@ public class Teacher {
     public String[] getInfo () {
         String[] teacherInfo = new String [4];
         teacherInfo[0] = Integer.toString(id);
-        teacherInfo[1] = name;
+        teacherInfo[1] = this.name;
         teacherInfo[2] = Double.toString(salary);
         teacherInfo[3] = Double.toString(salaryEarned);
 
