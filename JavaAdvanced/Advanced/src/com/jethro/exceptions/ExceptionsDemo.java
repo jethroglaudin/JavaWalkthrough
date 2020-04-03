@@ -9,6 +9,13 @@ import java.text.SimpleDateFormat;
 
 public class ExceptionsDemo {
     public static void show() {
+        var account = new Account();
+        try {
+            account.deposit(1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 //        FileReader reader = null;
         try (
                 var reader = new FileReader("file.txt");
