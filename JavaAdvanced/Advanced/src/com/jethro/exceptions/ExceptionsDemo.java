@@ -8,15 +8,24 @@ import java.text.SimpleDateFormat;
 
 public class ExceptionsDemo {
     public static void show() {
+        FileReader reader = null;
         try{
-            var reader = new FileReader("file.txt");
+            reader = new FileReader("file.txt");
             var value = reader.read();
             new SimpleDateFormat().parse("");
             System.out.println("File opened");
         } catch (IOException  | ParseException e) { // catching multiple exceptions
             System.out.println("Could not read data.");
         }
-
+        finally { // we can release extra resources like file handlers & DB connections/ finally block always gets executed
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public static void sayHello(String name) {
