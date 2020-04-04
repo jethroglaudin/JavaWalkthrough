@@ -1,8 +1,8 @@
 package com.jethro.generics;
 
-public class GenericList <T> {
+public class GenericList <T extends Comparable & Cloneable> {
     // class can have paramaters as well. the T represents the type of value our class will take.
-    private T[] items = (T[])new Object[10];
+    private T[] items = (T[]) new Object[10];
     private int count;
 
     public void add (T item) {

@@ -9,9 +9,12 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        GenericList<Integer> numbers = new GenericList();
-        numbers.add(1); // java compilier will wrap this interger to the Interger class (boxing)
-        int number = numbers.get(0); // (unboxing)
+        new GenericList<User>();
+
+
+//        GenericList<Integer> numbers = new GenericList();
+//        numbers.add(1); // java compilier will wrap this interger to the Interger class (boxing)
+//        int number = numbers.get(0); // (unboxing)
 
 
 
