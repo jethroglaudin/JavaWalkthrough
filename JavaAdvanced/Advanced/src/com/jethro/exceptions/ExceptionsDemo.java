@@ -8,12 +8,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class ExceptionsDemo {
-    public static void show() {
+    public static void show() throws IOException { // added exception for method
         var account = new Account();
         try {
-            account.deposit(1);
+            account.deposit(-1);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Logging");
+            throw e;
         }
 
 //        FileReader reader = null;
