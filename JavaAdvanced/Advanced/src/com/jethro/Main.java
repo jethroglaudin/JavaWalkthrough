@@ -7,9 +7,24 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        var instructors = new GenericList<Instructor>();
-        var users = new GenericList<User>();
-        Utils.printUsers(new GenericList<User>());
+        var list = new GenericList<String>();
+        var iterator = list.iterator();
+
+        for (var item : list){
+            System.out.println(item);
+        }
+
+        // [a, b, c]
+        //  ^
+        // object to iterator over a list or object that is iterable
+
+//        while (iterator.hasNext()){ // boolean
+//            var current = iterator.next();
+//            System.out.println(current);
+//        } // we can use a simple foreach loop to get same result. once compiled java will convert to use iterator object.
+//        var instructors = new GenericList<Instructor>();
+//        var users = new GenericList<User>();
+//        Utils.printUsers(new GenericList<User>());
 
 
 //        var max = Utils.max(new User(10), new User(20));
