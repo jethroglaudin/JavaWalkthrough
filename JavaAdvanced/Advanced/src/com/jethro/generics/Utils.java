@@ -12,8 +12,11 @@ public class Utils {
     public static void printUser(User user) {
         System.out.println(user);
     }
-
-    public static void printUsers(GenericList<User> users){
-
+    // class CAP#1 extends User{}
+    // class Instructor extends User
+    // if you want to read from list use extends keyword otherwise use super
+    public static void printUsers(GenericList<? super  User> users){ // ? wildcard character which means unknown type
+       GenericList<Object> temp = new GenericList<>();
+       Object x = users.get(0);
     }
 }

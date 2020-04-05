@@ -1,19 +1,21 @@
 package com.jethro;
 
 import com.jethro.exceptions.ExceptionsDemo;
-import com.jethro.generics.GenericList;
-import com.jethro.generics.List;
-import com.jethro.generics.User;
-import com.jethro.generics.Utils;
+import com.jethro.generics.*;
 
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        var max = Utils.max(new User(10), new User(20));
-        System.out.println(max);
+        var instructors = new GenericList<Instructor>();
+        var users = new GenericList<User>();
+        Utils.printUsers(new GenericList<User>());
 
-        Utils.print(1, 10);
+
+//        var max = Utils.max(new User(10), new User(20));
+//        System.out.println(max);
+//
+//        Utils.print(1, 10);
 
 //        var user1 = new User(10);
 //        var user2 = new User(20);
