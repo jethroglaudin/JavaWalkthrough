@@ -13,6 +13,8 @@ public class Main {
         var max = Utils.max(new User(10), new User(20));
         System.out.println(max);
 
+        Utils.print(1, 10);
+
 //        var user1 = new User(10);
 //        var user2 = new User(20);
 //        if(user1.compareTo(user2) < 0)
