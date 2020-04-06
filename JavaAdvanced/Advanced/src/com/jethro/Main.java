@@ -1,5 +1,6 @@
 package com.jethro;
 
+import com.jethro.collections.CollectionDemo;
 import com.jethro.exceptions.ExceptionsDemo;
 import com.jethro.generics.*;
 
@@ -7,13 +8,16 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        var list = new GenericList<String>();
-        list.add("a");
-        list.add("b");
+        CollectionDemo.show();
 
-        for (var item : list){
-            System.out.println(item);
-        }
+
+//        var list = new GenericList<String>();
+//        list.add("a");
+//        list.add("b");
+//
+//        for (var item : list){
+//            System.out.println(item);
+//        }
 
         // [a, b, c]
         //  ^
