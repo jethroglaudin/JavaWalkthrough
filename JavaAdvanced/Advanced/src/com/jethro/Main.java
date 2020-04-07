@@ -1,16 +1,27 @@
 package com.jethro;
 
 import com.jethro.collections.CollectionDemo;
+import com.jethro.collections.Customer;
 import com.jethro.collections.ListDemo;
 import com.jethro.exceptions.ExceptionsDemo;
 import com.jethro.generics.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import  java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        List <Customer> customers = new ArrayList<>();
+        customers.add(new Customer("Jethro"));
+        customers.add(new Customer("Williams"));
+        customers.add(new Customer("Glaudin"));
+        Collections.sort(customers);
+        System.out.println(customers);
+
 //        CollectionDemo.show();
-        ListDemo.show();
+//        ListDemo.show();
 
 
 //        var list = new GenericList<String>();
