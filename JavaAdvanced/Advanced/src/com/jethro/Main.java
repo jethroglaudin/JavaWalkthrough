@@ -1,12 +1,8 @@
 package com.jethro;
 
-import com.jethro.collections.CollectionDemo;
 import com.jethro.collections.Customer;
-import com.jethro.collections.ListDemo;
-import com.jethro.exceptions.ExceptionsDemo;
-import com.jethro.generics.*;
+import com.jethro.collections.EmailComparator;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import  java.util.List;
@@ -14,11 +10,11 @@ import  java.util.List;
 public class Main {
     public static void main(String[] args) {
         List <Customer> customers = new ArrayList<>();
-        customers.add(new Customer("Jethro"));
-        customers.add(new Customer("Williams"));
-        customers.add(new Customer("Glaudin"));
+        customers.add(new Customer("b", "e3"));
+        customers.add(new Customer("a", "e2"));
+        customers.add(new Customer("c", "e1"));
 
-        Collections.sort(customers);
+        Collections.sort(customers, new EmailComparator());
         System.out.println(customers);
 
 //        CollectionDemo.show();
