@@ -17,6 +17,7 @@ public class Main {
         customers.add(new Customer("Jethro"));
         customers.add(new Customer("Williams"));
         customers.add(new Customer("Glaudin"));
+
         Collections.sort(customers);
         System.out.println(customers);
 
