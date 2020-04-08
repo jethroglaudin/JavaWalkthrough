@@ -3,6 +3,7 @@ package com.jethro;
 import com.jethro.collections.Customer;
 import com.jethro.collections.EmailComparator;
 import com.jethro.collections.QueueDemo;
+import com.jethro.collections.SetDemo;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +11,9 @@ import  java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        QueueDemo.show();
+        SetDemo.show();
+
+//        QueueDemo.show();
 
 //        List <Customer> customers = new ArrayList<>();
 //        customers.add(new Customer("b", "e3"));
