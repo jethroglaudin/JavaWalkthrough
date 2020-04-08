@@ -1,9 +1,6 @@
 package com.jethro;
 
-import com.jethro.collections.Customer;
-import com.jethro.collections.EmailComparator;
-import com.jethro.collections.QueueDemo;
-import com.jethro.collections.SetDemo;
+import com.jethro.collections.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,7 +8,9 @@ import  java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        SetDemo.show();
+        MapDemo.show();
+
+//        SetDemo.show();
 
 //        QueueDemo.show();
 
