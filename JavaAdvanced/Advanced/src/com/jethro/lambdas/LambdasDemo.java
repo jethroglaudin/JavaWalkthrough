@@ -7,8 +7,6 @@ public class LambdasDemo {
         greet(message -> System.out.println(message)); // Lambda Expression
         Printer printer = message -> System.out.println(message); // Lambda expression as a variable
 
-
-
 //        greet(new Printer() { // Anonymous Inner class. Class does not have a name but an implementation. We can achieve the same result with less code.
 //            @Override
 //            public void print(String message) {
