@@ -1,8 +1,8 @@
 package com.jethro.lambdas;
 
 public class LambdasDemo {
-    public static String prefix = "-";
-    public static void show(){
+    public String prefix = "-";
+    public void show(){
 //        greet(new ConsolePrinter());
         // Lambda expressions are essentially objects, but we can use them to represent anonymous functions
         greet(message -> System.out.println(prefix + message)); // Lambda Expression
