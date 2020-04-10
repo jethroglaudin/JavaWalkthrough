@@ -7,7 +7,6 @@ public class LambdasDemo {
 
     public static void show(){
         greet(LambdasDemo::print);
-        greet(message -> new LambdasDemo());
         greet(LambdasDemo::new); // Method references through constructor.
         //Class/Object::method
 
