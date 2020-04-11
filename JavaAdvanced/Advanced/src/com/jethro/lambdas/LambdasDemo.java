@@ -1,13 +1,23 @@
 package com.jethro.lambdas;
 
-public class LambdasDemo {
-    public LambdasDemo(String message) {
-    }
-    public static void print (String message){}
+import java.util.List;
 
-    public static void show(){
-        greet(LambdasDemo::print);
-        greet(LambdasDemo::new); // Method references through constructor.
+public class LambdasDemo {
+    public static void show() {
+        List<Integer> list = List.of(1, 2, 3);
+
+        for (var item : list) // Imperative Programming (for if/else, switch/case) Instructions
+            System.out.println(item);
+
+        list.forEach(item -> System.out.println(item)); // Declarative Programming.
+    }
+//    public LambdasDemo(String message) {
+//    }
+//    public static void print (String message){}
+//
+//    public static void show(){
+//        greet(LambdasDemo::print);
+//        greet(LambdasDemo::new); // Method references through constructor.
         //Class/Object::method
 
 //        greet(new ConsolePrinter());
@@ -21,8 +31,8 @@ public class LambdasDemo {
 //                System.out.println(message);
 //            }
 //        });
-    }
-    public static void greet(Printer printer){
-        printer.print("Hello World");
-    }
+//    }
+//    public static void greet(Printer printer){
+//        printer.print("Hello World");
+//    }
 }
