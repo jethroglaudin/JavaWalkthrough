@@ -7,16 +7,17 @@ import java.util.function.Supplier;
 
 public class LambdasDemo {
     public static void show() {
-        Function<String, String> replaceColon = str -> str.replace(":","=");
+        Function<String, String> replaceColon = str -> str.replace(":", "=");
         Function<String, String> addBraces = str -> "{" + str + "}";
         var result = replaceColon
-                    .andThen(addBraces)
-                    .apply("key:value");
+                .andThen(addBraces)
+                .apply("key:value");
 
-        var result2 = addBraces.compose(replaceColon).apply("key:value");
+        var result2 = addBraces
+                .compose(replaceColon)
+                .apply("key:value");
         System.out.println(result);
         System.out.println(result2);
-
 
 
 //        Function<String, Integer> map = String::length; // Function interface. Takes paramater, <T,R> T represents type of argument R is type of the result.
@@ -45,10 +46,10 @@ public class LambdasDemo {
 //    public static void show(){
 //        greet(LambdasDemo::print);
 //        greet(LambdasDemo::new); // Method references through constructor.
-        //Class/Object::method
+    //Class/Object::method
 
 //        greet(new ConsolePrinter());
-        // Lambda expressions are essentially objects, but we can use them to represent anonymous functions
+    // Lambda expressions are essentially objects, but we can use them to represent anonymous functions
 //        greet(message -> System.out.println(message)); // Lambda Expression
 //        Printer printer = message -> System.out.println(message); // Lambda expression as a variable
 
