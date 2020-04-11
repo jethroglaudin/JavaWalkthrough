@@ -7,9 +7,19 @@ import java.util.function.Supplier;
 
 public class LambdasDemo {
     public static void show() {
-        Function<String, Integer> map = String::length; // Function interface. Takes paramater, <T,R> T represents type of argument R is type of the result.
-        var length = map.apply("Sky");
-        System.out.println(length);
+        Function<String, String> replaceColon = str -> str.replace(":","=");
+        Function<String, String> addBraces = str -> "{" + str + "}";
+        var result = replaceColon
+                    .andThen(addBraces)
+                    .apply("key:value");
+
+       var result2 = addBraces.compose(replaceColon).apply("key:value");
+        System.out.println(result);
+
+
+//        Function<String, Integer> map = String::length; // Function interface. Takes paramater, <T,R> T represents type of argument R is type of the result.
+//        var length = map.apply("Sky");
+//        System.out.println(length);
 
 //        Supplier<Double> getRandom = () -> Math.random(); // this function is not executed until explicitly called. value is not generated until we call for it.
 //        var random = getRandom.get();
