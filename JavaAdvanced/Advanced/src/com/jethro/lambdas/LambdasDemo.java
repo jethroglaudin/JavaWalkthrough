@@ -5,6 +5,12 @@ import java.util.function.*;
 
 public class LambdasDemo {
     public static void show() {
+        UnaryOperator<Integer> square1 = n -> n * n;
+        UnaryOperator<Integer> increment = n -> n + 1;
+
+        var unaryResult = increment.andThen(square1).apply(1);
+        System.out.println(unaryResult);
+
         // a, b ->  a + b -> square
         BinaryOperator<Integer> add = Integer::sum;
         Function<Integer, Integer> square = a -> a * a;
