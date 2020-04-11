@@ -2,13 +2,18 @@ package com.jethro.lambdas;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class LambdasDemo {
     public static void show() {
-        Supplier<Double> getRandom = () -> Math.random(); // this function is not executed until explicitly called. value is not generated until we call for it.
-        var random = getRandom.get();
-        System.out.println(random);
+        Function<String, Integer> map = String::length; // Function interface. Takes paramater, <T,R> T represents type of argument R is type of the result.
+        var length = map.apply("Sky");
+        System.out.println(length);
+
+//        Supplier<Double> getRandom = () -> Math.random(); // this function is not executed until explicitly called. value is not generated until we call for it.
+//        var random = getRandom.get();
+//        System.out.println(random);
 //        List<Integer> list = List.of(1, 2, 3);
 //        List<String> stringList = List.of("a", "b", "c");
 //        Consumer<String> print = item -> System.out.println(item);
