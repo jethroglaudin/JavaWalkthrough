@@ -8,6 +8,15 @@ import java.util.function.Supplier;
 
 public class LambdasDemo {
     public static void show() {
+        Predicate<String> hasLeftBrace = str -> str.startsWith("{");
+        Predicate<String> hasRightBrace = str -> str.endsWith("}");
+
+        Predicate<String> hasLeftAndRightBraces = hasLeftBrace.and(hasRightBrace);
+        var resultPredicate = hasLeftAndRightBraces.test("{key:value}");
+        hasLeftBrace.or(hasRightBrace);
+        hasLeftBrace.negate(); // returns new Predicate that returns the opposite of
+        System.out.println(resultPredicate);
+
         Predicate<String> isLongerThan5 = str -> str.length() > 5;
         var predicateResult = isLongerThan5.test("sky");
         System.out.println(predicateResult);
