@@ -13,8 +13,10 @@ public class LambdasDemo {
                     .andThen(addBraces)
                     .apply("key:value");
 
-       var result2 = addBraces.compose(replaceColon).apply("key:value");
+        var result2 = addBraces.compose(replaceColon).apply("key:value");
         System.out.println(result);
+        System.out.println(result2);
+
 
 
 //        Function<String, Integer> map = String::length; // Function interface. Takes paramater, <T,R> T represents type of argument R is type of the result.
