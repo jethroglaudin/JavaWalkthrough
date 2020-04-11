@@ -1,13 +1,18 @@
 package com.jethro.lambdas;
 
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class LambdasDemo {
     public static void show() {
+        // a, b ->  a + b -> square
+        BinaryOperator<Integer> add = Integer::sum;
+        Function<Integer, Integer> square = a -> a * a;
+
+        var binaryOperatorResult = add.andThen(square).apply(1, 2);
+        System.out.println(binaryOperatorResult);
+
+
         Predicate<String> hasLeftBrace = str -> str.startsWith("{");
         Predicate<String> hasRightBrace = str -> str.endsWith("}");
 
