@@ -1,15 +1,21 @@
 package com.jethro.lambdas;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class LambdasDemo {
     public static void show() {
         List<Integer> list = List.of(1, 2, 3);
+        List<String> stringList = List.of("a", "b", "c");
+        Consumer<String> print = item -> System.out.println(item);
+        Consumer<String> printUpperCase = item -> System.out.println(item.toUpperCase());
 
-        for (var item : list) // Imperative Programming (for if/else, switch/case) Instructions
-            System.out.println(item);
+        stringList.forEach(print.andThen(printUpperCase).andThen(print)); // Chaining Consumers
 
-        list.forEach(item -> System.out.println(item)); // Declarative Programming.
+//        for (var item : list) // Imperative Programming (for if/else, switch/case) Instructions
+//            System.out.println(item);
+//
+//        list.forEach(item -> System.out.println(item)); // Declarative Programming.
     }
 //    public LambdasDemo(String message) {
 //    }
