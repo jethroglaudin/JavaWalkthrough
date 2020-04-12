@@ -23,6 +23,7 @@ public class StreamsDemo {
                 .filter(movie -> movie.getLikes() > 10)
                 .count();
 
+        System.out.println(count2);
     }
 
 }
