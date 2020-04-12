@@ -2,6 +2,7 @@ package com.jethro;
 
 import com.jethro.collections.*;
 import com.jethro.lambdas.LambdasDemo;
+import com.jethro.streams.StreamsDemo;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +10,8 @@ import  java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        LambdasDemo.show();
+        StreamsDemo.show();
+//        LambdasDemo.show();
 //        MapDemo.show();
 
 //        SetDemo.show();
