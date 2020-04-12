@@ -11,8 +11,8 @@ import  java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        CreatingStreamsDemo.show();
         StreamsDemo.show();
+//        CreatingStreamsDemo.show();
 //        LambdasDemo.show();
 //        MapDemo.show();
 
