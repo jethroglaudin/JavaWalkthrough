@@ -1,6 +1,7 @@
 package com.jethro;
 
 import com.jethro.collections.*;
+import com.jethro.lambdas.CreatingStreamsDemo;
 import com.jethro.lambdas.LambdasDemo;
 import com.jethro.streams.StreamsDemo;
 
@@ -10,6 +11,7 @@ import  java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        CreatingStreamsDemo.show();
         StreamsDemo.show();
 //        LambdasDemo.show();
 //        MapDemo.show();
