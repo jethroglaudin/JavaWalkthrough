@@ -9,6 +9,10 @@ public class Movie {
         this.likes = likes;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public int getLikes() {
         return likes;
     }
