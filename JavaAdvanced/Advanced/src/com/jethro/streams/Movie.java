@@ -1,6 +1,6 @@
 package com.jethro.streams;
 
-public class Movie {
+public class Movie implements Comparable<Movie> {
     private String title;
     private  int likes;
 
@@ -15,5 +15,10 @@ public class Movie {
 
     public int getLikes() {
         return likes;
+    }
+
+    @Override
+    public int compareTo(Movie movie) {
+        return 0;
     }
 }
