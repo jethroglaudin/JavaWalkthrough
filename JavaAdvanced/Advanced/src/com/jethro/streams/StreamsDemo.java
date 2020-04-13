@@ -17,10 +17,21 @@ public class StreamsDemo {
 
         );
 
+        // peek is a great way to troubleshoot our stream.
+        // peek will allow us to get a output after each query
+        // intermediate operation
         movies.stream()
-                .map(Movie::getLikes)
-                .distinct() // get unique elements
+                .filter(movie -> movie.getLikes() > 10)
+                .peek(movie -> System.out.println("filtered: " + movie.getTitle()))
+                .map(Movie::getTitle)
+                .peek(title -> System.out.println("mapped: " + title))
                 .forEach(System.out::println);
+
+
+//        movies.stream()
+//                .map(Movie::getLikes)
+//                .distinct() // get unique elements
+//                .forEach(System.out::println);
 //        movies.stream()
 //                .sorted(Comparator.comparing(Movie::getTitle).reversed()) // Sorted in descending order
 //                .forEach(movie -> System.out.println(movie.getTitle()));
@@ -62,7 +73,7 @@ public class StreamsDemo {
 //        System.out.println(count2);
     }
 
-    private static String apply(Movie movie) {
-        return movie.getTitle();
-    }
+//    private static String apply(Movie movie) {
+//        return movie.getTitle();
+//    }
 }
