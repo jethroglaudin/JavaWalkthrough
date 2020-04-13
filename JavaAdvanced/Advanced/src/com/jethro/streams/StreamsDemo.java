@@ -1,5 +1,6 @@
 package com.jethro.streams;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -8,16 +9,20 @@ public class StreamsDemo {
     public static void show(){
         List<Movie> movies = List.of(
                 new Movie("A Quiet Place", 10),
-                new Movie("Casablanca", 30),
-                new Movie("The GodFather", 20)
+                new Movie("Casablanca", 20),
+                new Movie("The GodFather", 30)
         );
 
         movies.stream()
-//                .limit(2)
-//                .skip(2)
-//                .takeWhile(movie -> movie.getLikes() < 30)
-                .dropWhile(movie -> movie.getLikes() < 30)
+                .sorted(Comparator.comparing(Movie::getTitle).reversed()) // Sorted in descending order
                 .forEach(movie -> System.out.println(movie.getTitle()));
+
+//        movies.stream()
+////                .limit(2)
+////                .skip(2)
+////                .takeWhile(movie -> movie.getLikes() < 30)
+//                .dropWhile(movie -> movie.getLikes() < 30)
+//                .forEach(movie -> System.out.println(movie.getTitle()));
         // this will stop the moment it get to 30. Filter iterates the entire data source. takeWhile will stop the moment the predicate is false
         // opposite of takeWhile escapes all the elements that matches the predicate
 //        Predicate<Movie> isPopular = movie -> movie.getLikes() > 10;
@@ -49,4 +54,7 @@ public class StreamsDemo {
 //        System.out.println(count2);
     }
 
+    private static String apply(Movie movie) {
+        return movie.getTitle();
+    }
 }
