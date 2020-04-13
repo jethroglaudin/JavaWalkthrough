@@ -1,5 +1,7 @@
 package com.jethro.streams;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
@@ -10,12 +12,18 @@ public class StreamsDemo {
         List<Movie> movies = List.of(
                 new Movie("A Quiet Place", 10),
                 new Movie("Casablanca", 20),
-                new Movie("The GodFather", 30)
+                new Movie("The GodFather", 30),
+                new Movie("Inception", 30)
+
         );
 
         movies.stream()
-                .sorted(Comparator.comparing(Movie::getTitle).reversed()) // Sorted in descending order
-                .forEach(movie -> System.out.println(movie.getTitle()));
+                .map(Movie::getLikes)
+                .distinct() // get unique elements
+                .forEach(System.out::println);
+//        movies.stream()
+//                .sorted(Comparator.comparing(Movie::getTitle).reversed()) // Sorted in descending order
+//                .forEach(movie -> System.out.println(movie.getTitle()));
 
 //        movies.stream()
 ////                .limit(2)
