@@ -17,15 +17,29 @@ public class StreamsDemo {
 
         );
 
+
+        var result = movies.stream()
+                .max(Comparator.comparing(Movie::getLikes)) // Pass Comparator
+//                .findFirst() // Return first element in the stream. Optional class is good to prevent nullpointer exceptions
+//                .findAny(); // will find any elements in the stream.
+                .get(); // get the object
+//                .noneMatch(movie -> movie.getLikes() > 20); // returns boolean for if none of the elements match this condition
+//                .allMatch(movie -> movie.getLikes() > 20); // checks if all elements match the condition
+//                .anyMatch(movie -> movie.getLikes() > 20); // pass a Predicate to see if any elements in the stream matches the Predicate - returns boolean
+//                .count() // returns the nomber of elements in the stream as a primitive long value
+        System.out.println(result.getTitle());
+
+
+
         // peek is a great way to troubleshoot our stream.
         // peek will allow us to get a output after each query
         // intermediate operation
-        movies.stream()
-                .filter(movie -> movie.getLikes() > 10)
-                .peek(movie -> System.out.println("filtered: " + movie.getTitle()))
-                .map(Movie::getTitle)
-                .peek(title -> System.out.println("mapped: " + title))
-                .forEach(System.out::println);
+//        movies.stream()
+//                .filter(movie -> movie.getLikes() > 10)
+//                .peek(movie -> System.out.println("filtered: " + movie.getTitle()))
+//                .map(Movie::getTitle)
+//                .peek(title -> System.out.println("mapped: " + title))
+//                .forEach(System.out::println);
 
 
 //        movies.stream()
