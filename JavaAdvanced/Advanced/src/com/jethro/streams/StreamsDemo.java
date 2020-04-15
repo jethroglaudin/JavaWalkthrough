@@ -4,6 +4,7 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
@@ -12,22 +13,28 @@ public class StreamsDemo {
         List<Movie> movies = List.of(
                 new Movie("A Quiet Place", 10),
                 new Movie("Casablanca", 20),
-                new Movie("The GodFather", 30),
-                new Movie("Inception", 30)
-
+                new Movie("The GodFather", 30)
         );
 
+        // after map operation we'll have a stream like [10, 20, 30]
+        // then [30, 30]
+        // followed by [60]
+        Integer sum = movies.stream()
+                .map(movie -> movie.getLikes())
+                .reduce(0,Integer::sum);
 
-        var result = movies.stream()
-                .max(Comparator.comparing(Movie::getLikes)) // Pass Comparator
+        System.out.println(sum);
+
+//        var result = movies.stream()
+//                .max(Comparator.comparing(Movie::getLikes)) // Pass Comparator
 //                .findFirst() // Return first element in the stream. Optional class is good to prevent nullpointer exceptions
 //                .findAny(); // will find any elements in the stream.
-                .get(); // get the object
+//                .get(); // get the object
 //                .noneMatch(movie -> movie.getLikes() > 20); // returns boolean for if none of the elements match this condition
 //                .allMatch(movie -> movie.getLikes() > 20); // checks if all elements match the condition
 //                .anyMatch(movie -> movie.getLikes() > 20); // pass a Predicate to see if any elements in the stream matches the Predicate - returns boolean
 //                .count() // returns the nomber of elements in the stream as a primitive long value
-        System.out.println(result.getTitle());
+//        System.out.println(result.getTitle());
 
 
 
