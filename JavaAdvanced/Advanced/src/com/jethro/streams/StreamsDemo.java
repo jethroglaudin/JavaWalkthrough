@@ -5,7 +5,10 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamsDemo {
@@ -16,14 +19,30 @@ public class StreamsDemo {
                 new Movie("The GodFather", 30)
         );
 
+
+       var result =  movies.stream()
+                .filter(movie -> movie.getLikes() > 10)
+               .map(Movie::getTitle)
+               .collect(Collectors.joining(", "));
+//               .collect(Collectors.summarizingInt(Movie::getLikes));
+//               .collect(Collectors.summingInt(Movie::getLikes)); // Add up elements. Similar to reduce;
+
+//               .collect(Collectors.toMap(Movie::getTitle, Function.identity())); // Returns object
+//               .collect(Collectors.toMap(Movie::getTitle, Movie::getLikes)) / Turns stream to map
+
+//               .collect(Collectors.toSet()) // Stream turned to set;
+//                .collect(Collectors.toList()); // Stream turned to a list
+        System.out.println(result);
+
+
         // after map operation we'll have a stream like [10, 20, 30]
         // then [30, 30]
         // followed by [60]
-        Integer sum = movies.stream()
-                .map(movie -> movie.getLikes())
-                .reduce(0,Integer::sum);
-
-        System.out.println(sum);
+//        Integer sum = movies.stream()
+//                .map(movie -> movie.getLikes())
+//                .reduce(0,Integer::sum);
+//
+//        System.out.println(sum);
 
 //        var result = movies.stream()
 //                .max(Comparator.comparing(Movie::getLikes)) // Pass Comparator
