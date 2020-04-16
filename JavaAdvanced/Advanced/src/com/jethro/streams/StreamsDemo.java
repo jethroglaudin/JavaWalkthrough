@@ -11,13 +11,20 @@ public class StreamsDemo {
                 new Movie("The GodFather", 30, Genre.Drama)
         );
 
-       var result = movies.stream()
-                .collect(Collectors.groupingBy(
-                        Movie::getGenre,
-                        Collectors.mapping(
-                                Movie::getTitle,
+        var result = movies.stream()
+                .collect(Collectors.partitioningBy( // Partition Data within the stream.
+                        movie -> movie.getLikes() > 20,
+                        Collectors.mapping(Movie::getTitle,
                                 Collectors.joining(", "))));
+
         System.out.println(result);
+//       var result = movies.stream()
+//                .collect(Collectors.groupingBy(
+//                        Movie::getGenre,
+//                        Collectors.mapping(
+//                                Movie::getTitle,
+//                                Collectors.joining(", "))));
+//        System.out.println(result);
 
 //       var result =  movies.stream()
 //                .filter(movie -> movie.getLikes() > 10)
