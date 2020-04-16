@@ -1,4 +1,4 @@
-package com.jethro.lambdas;
+package com.jethro.streams;
 
 import java.util.ArrayList;
 import java.util.Arrays;

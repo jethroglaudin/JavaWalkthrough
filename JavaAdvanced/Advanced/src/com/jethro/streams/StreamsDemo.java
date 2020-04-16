@@ -20,10 +20,11 @@ public class StreamsDemo {
         );
 
 
-       var result =  movies.stream()
-                .filter(movie -> movie.getLikes() > 10)
-               .map(Movie::getTitle)
-               .collect(Collectors.joining(", "));
+
+//       var result =  movies.stream()
+//                .filter(movie -> movie.getLikes() > 10)
+//               .map(Movie::getTitle)
+//               .collect(Collectors.joining(", "));
 //               .collect(Collectors.summarizingInt(Movie::getLikes));
 //               .collect(Collectors.summingInt(Movie::getLikes)); // Add up elements. Similar to reduce;
 
@@ -32,7 +33,7 @@ public class StreamsDemo {
 
 //               .collect(Collectors.toSet()) // Stream turned to set;
 //                .collect(Collectors.toList()); // Stream turned to a list
-        System.out.println(result);
+//        System.out.println(result);
 
 
         // after map operation we'll have a stream like [10, 20, 30]
