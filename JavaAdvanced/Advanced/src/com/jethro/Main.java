@@ -5,6 +5,7 @@ import com.jethro.streams.StreamsDemo;
 public class Main {
     public static void main(String[] args) {
         StreamsDemo.show();
+        StreamsDemo.show2();
 //        CreatingStreamsDemo.show();
 //        LambdasDemo.show();
 //        MapDemo.show();
