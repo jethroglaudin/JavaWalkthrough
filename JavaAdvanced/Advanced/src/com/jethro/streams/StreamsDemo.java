@@ -2,8 +2,14 @@ package com.jethro.streams;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StreamsDemo {
+    public static void show2() {
+        IntStream.rangeClosed(1, 5)
+                .forEach(System.out::println);
+    }
+
     public static void show(){
         List<Movie> movies = List.of(
                 new Movie("A Quiet Place", 10, Genre.THRILLER),
