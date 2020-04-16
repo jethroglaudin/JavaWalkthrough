@@ -1,7 +1,7 @@
 package com.jethro.streams;
 
 public enum Genre {
-    COMEDY,
-    ACTION,
+    ROMANCE,
+    Drama,
     THRILLER
 }
