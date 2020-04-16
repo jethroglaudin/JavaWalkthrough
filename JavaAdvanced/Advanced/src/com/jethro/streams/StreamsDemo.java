@@ -1,22 +1,13 @@
 package com.jethro.streams;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class StreamsDemo {
     public static void show(){
         List<Movie> movies = List.of(
-                new Movie("A Quiet Place", 10),
-                new Movie("Casablanca", 20),
-                new Movie("The GodFather", 30)
+                new Movie("A Quiet Place", 10, genre),
+                new Movie("Casablanca", 20, genre),
+                new Movie("The GodFather", 30, genre)
         );
 
 
